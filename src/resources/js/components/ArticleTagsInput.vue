@@ -12,9 +12,7 @@
             placeholder="タグを5個まで入力できます"
             @tags-changed="newTags => tags = newTags"
         >
-
         </vue-tags-input>
-
     </div>
 </template>
 

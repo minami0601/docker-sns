@@ -3,7 +3,7 @@
         <input
             type="hidden"
             name="tags"
-            :value="tagJson"
+            :value="tagsJson"
         >
         <vue-tags-input
             v-model="tag"
@@ -23,10 +23,16 @@ export default {
     components: {
         VueTagsInput,
     },
+    props: {
+        initialTags: {
+            type: Array,
+            default: [],
+        },
+    },
     data() {
         return {
             tag: '',
-            tags: [],
+            tags: this.initialTags,
             autocompleteItems: [{
                 text: 'Spain',
             }, {
